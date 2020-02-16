@@ -1,0 +1,23 @@
+<h3>Product List</h3>
+<table class="table">
+    <thead class="table-row">
+        <tr class="table-data">
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Buy</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <img src="assets/http://learningprogramming.net/wp-content/uploads/mean_stack/angular/{{product.photo}}" placeholder="some image" width="50">
+        </td>
+        <td>
+            <!-- <a [routerLink]="['/cart', { id:product.id}]">Buy Now</a> -->
+        </td>
+    </tr>
+</table>
